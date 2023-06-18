@@ -5,6 +5,8 @@ let totalTimer;
 let questionTimer;
 let questions;
 
+
+// this fucntion is used to start the quiz after selecting the quiz topic//
 function startQuiz(category) {
   currentCategory = category;
   currentQuestionIndex = 0;
@@ -127,6 +129,7 @@ function skipQuestion() {
   }
 }
 
+// this function is used to go back to the home page or quiz selection page//
 function goBackToCategorySelection() {
   clearInterval(totalTimer);
   clearInterval(questionTimer);
@@ -136,6 +139,9 @@ function goBackToCategorySelection() {
   document.getElementById('category-selection').style.display = 'block';
 }
 
+
+
+// this function is used for starting the timer for the individual question//
 function startQuestionTimer() {
   let timeLeft = 30; // Set the question timer duration (in seconds)
   document.getElementById('timer').textContent = timeLeft;
@@ -153,6 +159,8 @@ function startQuestionTimer() {
   }, 1000);
 }
 
+
+// this function is used to show the remaining time of the entire quiz section//
 function startTotalTimer() {
   let timeLeft = 5 * 60; // Set the timer duration to 5 minutes in seconds
   document.getElementById('total-timer').textContent = formatTime(timeLeft);
@@ -170,12 +178,17 @@ function startTotalTimer() {
   }, 1000);
 }
 
+
+
+// this function does calculations for showing the time for quiz section//
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
   return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
+
+// this function is used for ending the quiz if the user has attempted or not attempted the quiz//
 function endQuiz() {
   clearInterval(totalTimer);
   clearInterval(questionTimer);
@@ -204,6 +217,8 @@ function endQuiz() {
   document.getElementById('category-selection').style.display = 'block';
 }
 
+
+// this function is used to show the feedback of the last quiz attempted(the user has to enter he feddback of the last quiz) //
 function getFeedbackMessage(score) {
   if (score >= 90) {
     return 'Congratulations! You did an excellent job!';
