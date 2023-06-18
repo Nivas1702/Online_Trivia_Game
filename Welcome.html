@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- I included the welcome.html css here because i want it to be more understandable and googd looking -->
+    <title>Welcome to Trivia Quiz</title>
+    <style>
+        body {
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Trivia Quiz</h1>
+    <p>Click the button below to start the quiz.</p>
+    <button onclick="startQuiz()">Start Quiz</button>
+
+    <script>
+        function startQuiz() {
+            window.location.href = "a1.html"; // Navigate to the quiz page
+        }
+    </script>
+</body>
+</html>

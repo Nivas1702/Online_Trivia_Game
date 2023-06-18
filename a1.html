@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" type="text/css" href="a1.css">
+</head>
+<body>
+    <h1>Gitam Trivia Quiz</h1>
+    <div id="category-selection">
+        <h2>Kindly Select a category</h2>
+        <button onclick="startQuiz('history')">History</button>
+        <button onclick="startQuiz('sports')">Sports</button>
+        <button onclick="startQuiz('science')">Science</button>
+        <button onclick="startQuiz('currentAffairs')">Current Affairs</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <div id="total-timer">00:00</div>
+        <p>Time Remaining: <span id="timer"></span></p>
+        <p id="feedback"></p>
+        <p id="score"></p>
+    </div>
+
+    <script src="a1.js"></script>
+</body>
+</html>
