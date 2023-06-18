@@ -33,6 +33,7 @@ const categoryIds = {
   // Add more categories and their IDs here
 };
 
+// this function is used to fetch the questions from the opentdb api//
 function fetchTriviaQuestions(category) {
   const amount = 10; // Specify the number of questions to fetch
   const categoryId = categoryIds[category];
@@ -58,6 +59,7 @@ function fetchTriviaQuestions(category) {
     });
 }
 
+// this function displays the questions on the view//
 function showQuestion() {
   const question = questions[currentQuestionIndex];
 
@@ -89,6 +91,7 @@ function showQuestion() {
   startQuestionTimer();
 }
 
+// this function selects the right answer//
 function selectAnswer(selectedOption) {
   const question = questions[currentQuestionIndex];
 
@@ -112,6 +115,8 @@ function selectAnswer(selectedOption) {
   }
 }
 
+
+// this function is uesd to skip to the next question//
 function skipQuestion() {
   currentQuestionIndex++;
 
