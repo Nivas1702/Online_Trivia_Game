@@ -16,4 +16,4 @@ a1.css
 a1.js
 
 
-you can this code in your machine to view my project
+you can run this code in your machine to view my project
